@@ -7,13 +7,8 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@9z(i82%2@79e#cx(m=^58k$00-iop)j=4nsmikf9b8%-(vou*'
-DEBUG = True
-ALLOWED_HOSTS = [
-    "api.tunapbi.com.br",
-    "127.0.0.1",
-    "localhost",
-    "10.111.35.201"
-    ]
+DEBUG = os.environ.get('DJANGO_DEBUG')
+ALLOWED_HOSTS = os.environ.get('HOST_AUTORIZATION').split(' ')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
