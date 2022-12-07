@@ -5,3 +5,5 @@ djangorestframework==3.14.0
 Markdown==3.4.1
 djangorestframework-simplejwt==5.2.2
 python-dotenv==0.21.0
+django-smart-selects==1.6.0
+django-sass-processor==1.2.2
